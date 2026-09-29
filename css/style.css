@@ -1,0 +1,1090 @@
+/* =====================================================
+   BORA ALI TURISMO
+   CSS PRINCIPAL
+===================================================== */
+
+:root {
+    --verde: #163c32;
+    --verde-escuro: #0d2922;
+    --verde-claro: #e8f0ed;
+
+    --laranja: #ef7f32;
+    --laranja-escuro: #d96620;
+
+    --creme: #f7f6f1;
+    --branco: #ffffff;
+
+    --texto: #26332f;
+    --cinza: #6c7773;
+
+    --borda: #e5e8e6;
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--creme);
+    color: var(--texto);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    height: 78px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--verde) !important;
+    letter-spacing: -0.5px;
+}
+
+.logo i {
+    color: var(--laranja);
+    margin-right: 6px;
+}
+
+.navbar-nav {
+    gap: 8px;
+}
+
+.nav-link {
+    color: var(--texto) !important;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 10px 14px !important;
+    transition: 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--laranja) !important;
+}
+
+
+/* DROPDOWN */
+
+.dropdown-menu {
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.dropdown-item {
+    border-radius: 8px;
+    padding: 9px 12px;
+    color: var(--texto);
+    font-size: 0.9rem;
+    transition: 0.2s;
+}
+
+.dropdown-item:hover {
+    background: var(--verde-claro);
+    color: var(--verde);
+}
+
+
+/* =====================================================
+   BOTÕES
+===================================================== */
+
+.btn-bora {
+    background: var(--laranja);
+    border: 2px solid var(--laranja);
+    color: white;
+    font-weight: 700;
+    padding: 12px 25px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.btn-bora:hover {
+    background: var(--laranja-escuro);
+    border-color: var(--laranja-escuro);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-bora {
+    background: transparent;
+    border: 2px solid var(--verde);
+    color: var(--verde);
+    font-weight: 700;
+    padding: 12px 25px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.btn-outline-bora:hover {
+    background: var(--verde);
+    color: white;
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    padding-top: 145px;
+    padding-bottom: 90px;
+    background: var(--creme);
+}
+
+.hero-text {
+    padding-right: 45px;
+}
+
+.hero-tag {
+    display: inline-block;
+    color: var(--laranja);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    color: var(--verde);
+    font-size: 4rem;
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--laranja);
+}
+
+.hero p {
+    color: var(--cinza);
+    font-size: 1.08rem;
+    line-height: 1.7;
+    max-width: 520px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+
+/* =====================================================
+   HERO IMAGE
+===================================================== */
+
+.hero-image {
+    position: relative;
+    height: 530px;
+    border-radius: 35px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(22, 60, 50, 0.18);
+}
+
+.hero-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(13, 41, 34, 0.55),
+        transparent 55%
+    );
+    pointer-events: none;
+}
+
+.hero-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   HERO CARD
+===================================================== */
+
+.hero-card {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    right: 25px;
+    z-index: 2;
+
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 18px;
+    padding: 18px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.hero-card small {
+    display: block;
+    color: var(--cinza);
+    font-size: 0.75rem;
+    margin-bottom: 4px;
+}
+
+.hero-card strong {
+    color: var(--verde);
+    font-size: 1rem;
+}
+
+.hero-card i {
+    color: var(--laranja);
+    font-size: 1.3rem;
+}
+
+
+/* =====================================================
+   DESTINOS
+===================================================== */
+
+.destinos {
+    padding: 100px 0;
+    background: white;
+}
+
+.section-heading {
+    margin-bottom: 45px;
+}
+
+.section-tag {
+    display: inline-block;
+    color: var(--laranja);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.section-heading h2,
+.sobre h2 {
+    color: var(--verde);
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+}
+
+.section-heading p {
+    color: var(--cinza);
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+.link-bora {
+    color: var(--laranja);
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.link-bora:hover {
+    color: var(--laranja-escuro);
+}
+
+
+/* =====================================================
+   LINKS DOS DESTINOS E DESAFIOS
+===================================================== */
+
+.destination-link,
+.challenge-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+
+/* =====================================================
+   CARDS DE DESTINO
+===================================================== */
+
+.destination-card {
+    background: white;
+    border: 1px solid var(--borda);
+    border-radius: 22px;
+    overflow: hidden;
+    height: 100%;
+    transition: 0.35s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px rgba(22, 60, 50, 0.12);
+    border-color: transparent;
+}
+
+.destination-image {
+    height: 230px;
+    position: relative;
+    overflow: hidden;
+}
+
+.destination-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.destination-card:hover .destination-image img {
+    transform: scale(1.06);
+}
+
+
+/* FAVORITO */
+
+.favorite {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+
+    color: var(--verde);
+    font-size: 1rem;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* CONTEÚDO */
+
+.destination-content {
+    padding: 22px;
+}
+
+.location {
+    color: var(--laranja);
+    font-size: 0.78rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.location i {
+    margin-right: 5px;
+}
+
+.destination-content h3 {
+    color: var(--verde);
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.destination-content p {
+    color: var(--cinza);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.price {
+    color: var(--verde);
+    font-weight: 800;
+    font-size: 1.15rem;
+}
+
+.price small {
+    display: block;
+    color: var(--cinza);
+    font-size: 0.72rem;
+    font-weight: 400;
+    margin-bottom: 2px;
+}
+
+
+/* =====================================================
+   BANNER
+===================================================== */
+
+.travel-banner {
+    margin-top: 80px;
+    background: var(--verde);
+    border-radius: 28px;
+    padding: 55px;
+    position: relative;
+    overflow: hidden;
+}
+
+.travel-banner::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.04);
+    right: -100px;
+    top: -100px;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+}
+
+.banner-content h2 {
+    color: white;
+    font-size: 2.3rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.banner-content p {
+    color: rgba(255, 255, 255, 0.75);
+    max-width: 600px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   SOBRE
+===================================================== */
+
+.sobre {
+    padding: 100px 0;
+    background: var(--creme);
+}
+
+.sobre h2 {
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    color: var(--cinza);
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.about-card {
+    background: white;
+    border: 1px solid var(--borda);
+    border-radius: 22px;
+    padding: 30px;
+    height: 100%;
+}
+
+.about-card i {
+    color: var(--laranja);
+    font-size: 1.8rem;
+    margin-bottom: 18px;
+}
+
+.about-card h3 {
+    color: var(--verde);
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.about-card p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   SEÇÃO DE DESAFIOS
+===================================================== */
+
+.desafios {
+    padding: 100px 0;
+    background: var(--creme);
+}
+
+.challenge-card {
+    height: 100%;
+    background: white;
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+    padding: 28px 24px;
+
+    transition: 0.35s ease;
+}
+
+.challenge-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(22, 60, 50, 0.12);
+    border-color: transparent;
+}
+
+.challenge-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--verde-claro);
+    border-radius: 15px;
+
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.challenge-card h3 {
+    color: var(--verde);
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.challenge-card p {
+    color: var(--cinza);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.challenge-card .challenge-button {
+    color: var(--laranja);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.challenge-card .challenge-button i {
+    margin-left: 5px;
+    transition: 0.3s;
+}
+
+.challenge-card:hover .challenge-button i {
+    transform: translateX(4px);
+}
+
+
+/* =====================================================
+   PÁGINA DE ESCOLHA DOS DESAFIOS
+===================================================== */
+
+.challenge-choice {
+    padding: 140px 0 90px;
+    background: var(--creme);
+}
+
+.challenge-choice-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.challenge-choice-header h1 {
+    color: var(--verde);
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.challenge-choice-header p {
+    color: var(--cinza);
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+.choice-card {
+    background: white;
+    border: 1px solid var(--borda);
+    border-radius: 22px;
+    padding: 30px;
+    height: 100%;
+    transition: 0.35s ease;
+}
+
+.choice-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 40px rgba(22, 60, 50, 0.12);
+}
+
+.choice-icon {
+    font-size: 2rem;
+    margin-bottom: 18px;
+}
+
+.choice-card h2 {
+    color: var(--verde);
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.choice-card p {
+    color: var(--cinza);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+
+/* =====================================================
+   PÁGINAS DOS DESAFIOS
+===================================================== */
+
+.desafio-page {
+    min-height: 100vh;
+    padding: 140px 0 80px;
+    background: var(--creme);
+}
+
+.desafio-box {
+    background: white;
+    border: 1px solid var(--borda);
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(22, 60, 50, 0.07);
+}
+
+.desafio-box h1 {
+    color: var(--verde);
+    font-size: 2.3rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.desafio-box .descricao {
+    color: var(--cinza);
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.form-label {
+    color: var(--verde);
+    font-weight: 700;
+}
+
+.form-control,
+.form-select {
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    padding: 12px 14px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--laranja);
+    box-shadow: 0 0 0 0.2rem rgba(239, 127, 50, 0.12);
+}
+
+.resultado {
+    display: none;
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 15px;
+    background: var(--verde-claro);
+    color: var(--verde);
+}
+
+.resultado.show {
+    display: block;
+}
+
+.resultado strong {
+    font-size: 1.2rem;
+}
+
+
+/* =====================================================
+   PÁGINA ENCONTRAR VIAGEM
+===================================================== */
+
+.viagens-page {
+    padding: 140px 0 90px;
+    background: var(--creme);
+}
+
+.viagens-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.viagens-header h1 {
+    color: var(--verde);
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.viagens-header p {
+    color: var(--cinza);
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+.search-box {
+    background: white;
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    padding: 25px;
+    margin-bottom: 40px;
+}
+
+.offer-card {
+    height: 100%;
+    background: white;
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.35s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(22, 60, 50, 0.12);
+}
+
+.offer-image {
+    height: 220px;
+    overflow: hidden;
+}
+
+.offer-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+
+.offer-card:hover .offer-image img {
+    transform: scale(1.06);
+}
+
+.offer-content {
+    padding: 22px;
+}
+
+.offer-content h3 {
+    color: var(--verde);
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.offer-content p {
+    color: var(--cinza);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.offer-price {
+    color: var(--verde);
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 15px 0;
+}
+
+.offer-price small {
+    display: block;
+    color: var(--cinza);
+    font-size: 0.72rem;
+    font-weight: 400;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: var(--verde-escuro);
+    color: white;
+}
+
+.footer-top {
+    padding: 65px 0 45px;
+}
+
+.footer-logo {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.footer-logo i {
+    color: var(--laranja);
+    margin-right: 6px;
+}
+
+.footer-top p {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.footer-top h5 {
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.footer-top ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-top ul li {
+    margin-bottom: 9px;
+}
+
+.footer-top ul li a {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.88rem;
+    transition: 0.3s;
+}
+
+.footer-top ul li a:hover {
+    color: var(--laranja);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.8rem;
+}
+
+
+/* =====================================================
+   RESPONSIVE — TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .navbar {
+        height: auto;
+        min-height: 78px;
+    }
+
+    .navbar-collapse {
+        background: white;
+        padding: 15px;
+        border-radius: 0 0 15px 15px;
+    }
+
+    .navbar-nav {
+        gap: 0;
+    }
+
+    .hero {
+        padding-top: 120px;
+    }
+
+    .hero-text {
+        padding-right: 0;
+        margin-bottom: 45px;
+    }
+
+    .hero h1 {
+        font-size: 3.4rem;
+    }
+
+    .hero-image {
+        height: 470px;
+    }
+
+    .banner-content {
+        text-align: center;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE — CELULAR
+===================================================== */
+
+@media (max-width: 767px) {
+
+    .hero {
+        padding-top: 105px;
+        padding-bottom: 65px;
+    }
+
+    .hero h1 {
+        font-size: 2.7rem;
+        letter-spacing: -1px;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-image {
+        height: 390px;
+        border-radius: 25px;
+    }
+
+    .hero-card {
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .destinos,
+    .sobre,
+    .desafios {
+        padding: 70px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .section-heading h2,
+    .sobre h2 {
+        font-size: 2rem;
+    }
+
+    .destination-image {
+        height: 250px;
+    }
+
+    .about-card {
+        margin-bottom: 20px;
+    }
+
+    .travel-banner {
+        padding: 40px 25px;
+        border-radius: 22px;
+    }
+
+    .banner-content h2 {
+        font-size: 2rem;
+    }
+
+    .challenge-choice,
+    .viagens-page,
+    .desafio-page {
+        padding-top: 110px;
+    }
+
+    .challenge-choice-header h1,
+    .viagens-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .desafio-box {
+        padding: 25px;
+    }
+
+    .desafio-box h1 {
+        font-size: 1.9rem;
+    }
+
+    .footer-top,
+    .footer-bottom {
+        text-align: center;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE — CELULAR PEQUENO
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .hero-image {
+        height: 330px;
+    }
+
+    .hero-card {
+        padding: 14px;
+    }
+
+    .hero-card strong {
+        font-size: 0.9rem;
+    }
+
+    .banner-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .challenge-card {
+        padding: 22px 20px;
+    }
+
+    .choice-card {
+        padding: 25px 20px;
+    }
+
+    .desafio-box {
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    .offer-image {
+        height: 200px;
+    }
+}
